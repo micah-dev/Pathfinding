@@ -24,8 +24,7 @@ public class Driver {
     public void randomizeWorld() {
         Random r1 = new Random();
         Random r2 = new Random();
-        //int cap = (n*n) / 10; // unwalkable tiles on 10 percent of board
-        int cap = 50;
+        int cap = (n*n) / 10; // unwalkable tiles on 10 percent of board
         for (int i = 0; i < cap; i++) {
             int s1 = r1.nextInt(n-1);
             int s2 = r2.nextInt(n-1);
@@ -100,18 +99,13 @@ public class Driver {
             
             // Add currTile to closedList
             closedList.add(currTile);
-
-            // test
-            //System.out.println("currTile details: " + currTile.printTile());
             
             // then check to see if current is goal node
             if (currTile.getRow() == finishPos[0] && currTile.getCol() == finishPos[1]) {
-                
                 goalFound = true;
                 System.out.println("Path has been found");
                 printResult(currTile);
                 return;
-
             }
 
             // Generate neighbors and add to openList
