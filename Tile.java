@@ -1,3 +1,5 @@
+package Pathfinding;
+
 // Node class
 public class Tile implements Comparable<Tile> {
     

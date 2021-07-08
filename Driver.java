@@ -1,3 +1,5 @@
+package Pathfinding;
+
 import java.util.*;
 
 public class Driver {
